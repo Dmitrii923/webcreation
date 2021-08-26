@@ -1,0 +1,5 @@
+<?php
+echo <<<GOLGO
+<div id="button"><a href="index.php"><img src="img/b1.jpg" border="0" onmouseover="this .src='img/b1_mo.jpg'"onmouseout="this .src='img/b1.jpg'" width="141" height="49" /></a><a href="about.php"><img src="img/b2.jpg" border="0" onmouseover="this .src='img/b2_mo.jpg'"onmouseout="this .src='img/b2.jpg'" width="142" height="49" /></a><a href="function.php"><img src="img/b3.jpg" border="0" onmouseover="this .src='img/b3_mo.jpg'"onmouseout="this .src='img/b3.jpg'" width="141" height="49" /></a><a href="price.php"><img src="img/b4.jpg" border="0" onmouseover="this .src='img/b4_mo.jpg'"onmouseout="this .src='img/b4.jpg'" width="142" height="49" /></a><a href="order.php"><img src="img/b5.jpg" border="0" onmouseover="this .src='img/b5_mo.jpg'"onmouseout="this .src='img/b5.jpg'" width="141" height="49" /></a><a href="showcase.php"><img src="img/b6.jpg" border="0" onmouseover="this .src='img/b6_mo.jpg'"onmouseout="this .src='img/b6.jpg'" width="142" height="49" /></a><a href="contact.php"><img src="img/b7.jpg" border="0" onmouseover="this .src='img/b7_mo.jpg'"onmouseout="this .src='img/b7.jpg'" width="143" height="49" /></a></div>
+GOLGO;
+?>

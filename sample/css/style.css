@@ -1,0 +1,312 @@
+@charset "utf-8";
+
+/* 文書全体 */
+* {
+	margin: 0px;
+}
+
+/* 全てのスクリーンサイズで適用される設定・モバイルファースト */
+
+/* body */
+body {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color: #333;
+}
+
+/* header */
+header {
+	background-color: #111111;
+	overflow: hidden;
+	position: fixed;
+    top: 0;
+    left:0;
+	z-index: 20;
+	width: 100%;	
+}
+#logo {
+	float: left;
+}
+#menuButton {
+	float: right;
+}
+
+/*----------------
+ボタン関連
+----------------*/
+
+.btn {
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: Arial;
+  color: #000000;
+  font-size: 20px;
+  background: #c7c7c7;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #999;
+  text-decoration: none;
+}
+
+/* nav */
+#nav {
+	display: none;
+	clear: both;	
+}
+#nav ul {
+	padding: 0px;
+}
+#nav ul li {
+	background-color: #111111; /* メニューの背景色 */
+	list-style-type: none;
+	font-size: 13px;
+}
+#nav ul li a:link {
+	color: #F7F7F7; /* リンクの文字色 */
+	text-decoration: none;
+	display: block;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #4F4F4F;
+	padding-top: 15px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+}
+#nav ul li a:visited {
+	color: #F7F7F7; /* クリック後のリンクの文字色 */
+	text-decoration: none;
+	display: block;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #4F4F4F;
+	padding-top: 15px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+}
+#nav ul li a:hover {
+	color: #FFFFFF; /* マウスカーソルを合わせた時の文字色 */
+	text-decoration: none;
+	display: block;
+	background-color: #4F4F4F; /* マウスカーソルを合わせた時の背景色 */
+	padding-top: 15px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+}
+
+/* content */
+.content {
+	background-color: #FFFFFF; /* コンテンツ内の背景色 */
+	display: inline-block;
+	width: 100%;
+	clear: left;
+	text-align: justify;
+	text-justify: inter-ideograph;  
+	word-break: break-all;
+	margin-top: 75px;
+}
+.content a:link {
+	color: #1C1C1C; /* リンクの文字色 */
+}
+.content a:visited {
+	color: #1C1C1C; /* クリック後のリンクの文字色 */
+}
+.content a:hover {
+	color: #6B6B6B; /* マウスカーソルを合わせた時の文字色 */
+}
+.content h1 {
+	padding-top: 5px;
+	padding-left: 8px;
+	padding-right: 5px;
+	border-left-width: 8px;
+	border-left-style: solid;
+	border-left-color: #111111; /* 見出し左側のボーダーカラー */
+	font-size: 130%; /* 見出し1（h1）のフォントサイズ */
+	margin-top: 20px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	color: #111111;
+	clear: both;
+}
+.content h2 {
+	padding-top: 5px;
+	padding-left: 8px;
+	padding-right: 5px;
+	border-left-width: 8px;
+	border-left-style: solid;
+	border-left-color: #111111; /* 見出し左側のボーダーカラー */
+	font-size: 140%; /* 見出し2（h2）のフォントサイズ */
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	color: #111111;
+	clear: both;
+}
+.content h3 {
+	padding-top: 5px;
+	padding-left: 8px;
+	padding-right: 5px;
+	border-left-width: 8px;
+	border-left-style: solid;
+	border-left-color: #111111; /* 見出し左側のボーダーカラー */
+	font-size: 130%; /* 見出し3（h3）のフォントサイズ */
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	color: #111111;
+	clear: both;
+}
+.content p {
+	margin-top: 10px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+}
+
+/* footer */
+footer {
+	color: #FFFFFF; /* フッターの文字色 */
+	font-size: 90%;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #111111;
+	clear: both;
+	font-size: 10px;
+}
+footer a:link {
+	color: #FFFFFF; /* リンクの文字色 */
+}
+footer a:visited {
+	color: #FFFFFF; /* クリック後のリンクの文字色 */
+}
+footer a:hover {
+	color: #DADADA; /* マウスカーソルを合わせた時の文字色 */
+}
+
+/* image */
+img {
+	max-width: 100%;
+	height: auto;
+	border-style: none;
+	vertical-align: bottom;
+}
+.photo {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+/* テキストの装飾 */
+.font1 {
+	color: #F00; /* 赤色の文字 */
+}
+
+
+
+/* スクリーンサイズ 幅 700px 以上で適用される設定・上から継承したスタイルを上書き */
+@media only screen and (min-width: 900px) {
+
+/* header */
+#logo {
+	float: none;
+}
+#menuButton {
+	display: none;
+}
+#wrap1 {
+	position: relative;
+	background-color: #111;
+	overflow: hidden;
+}
+
+/* nav */
+#wrap1 #nav {
+	display: block;
+	position: absolute;
+	top: 28px; /* メニューの開始位置（上） */
+	left: 215px; /* メニューの開始位置（左） */
+}
+#wrap1 #nav ul {
+	padding: 0px;
+}
+#wrap1 #nav ul li {
+	float: left;
+}
+#wrap1 #nav ul li a:link {
+	color: #FFF;
+	border-top-style: none;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+#wrap1 #nav ul li a:visited {
+	color: #FFF;
+	border-top-style: none;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+#wrap1 #nav ul li a:hover {
+	color: #CCC;
+	background-color: #111111; /* マウスカーソルを合わせた時の背景色 */
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+
+}
+
+
+
+/* スクリーンサイズ 幅 900px 以上で画像の右側にテキストが回り込む設定 */
+@media only screen and (min-width: 900px) {
+
+.photo {
+	float: left;
+}
+
+}
+
+
+
+/* スクリーンサイズ 幅 1200px 以上で適用される設定・上から継承したスタイルを上書き */
+@media only screen and (min-width: 1200px) {
+
+/* header */
+header {
+	background-color: #111111;
+	overflow: hidden;
+}
+#wrap1 {
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#wrap2 {
+	background-image: url(../images/bg.png);
+}
+#mainImg {
+	text-align: center;
+}
+
+/* content */
+.content {
+	display: block;
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+}

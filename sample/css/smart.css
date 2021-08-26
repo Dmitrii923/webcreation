@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width:640px){
+img{
+	max-width: 100%;
+	height: auto;
+	width /***/:auto;　
+}
+
+#container{
+	width:100%;
+}
+
+～以下、画面の横幅が640pxまでの場合のスタイル記入～
+
+body
+{
+	font-size:12px;
+	color:#333333;
+	font-family:"メイリオ";
+	line-height:18px;
+}
+
+.clear {
+	clear:both;
+}
+
+#header {
+	background-color: #111;
+	text-align: center;
+	color: #FFF;
+	padding: 10px;
+	font-size: 20px;
+}
+
+#header2 {
+	background-color: #111;
+	text-align: center;
+	color: #FFF;
+	padding: 20px;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+#text1 {
+	text-align: center;
+	color: #C00;
+	font-size: 12px;
+	margin: 30px 5px;
+}
+
+#loginbox {
+	margin: 10px auto;
+	border-radius: 10px;        /* CSS3草案 */
+	-webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
+	-moz-border-radius: 10px;   /* Firefox用 */
+	border:1px solid #ccc;
+	padding: 15px;
+	width: 90%;
+	font-size: 22px;
+}
+
+#container {
+	margin: 0px auto;
+	text-align: center;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+#footer {
+	background-color: #333;
+	text-align: center;
+	color: #FFF;
+	padding: 30px;
+	font-size: 15px;
+	margin-top: 40px;
+}
+
+/* メニューリスト */
+
+#menulist {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#content {
+    position: relative;
+    height: 2000px;
+}
+header {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+#content .follow {
+    position: fixed;
+    top: 0;
+}
+
+}
+

@@ -1,0 +1,562 @@
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.8.1
+*/
+
+
+body {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	-webkit-text-size-adjust: 100%;
+	background-color: #FFF;
+	color: #666;
+}
+img {
+     max-width: 100%;
+     height: auto;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+p {
+	font-size: 10px;
+	line-height: 1.3em;
+}
+h1 {
+	font-size: 10px;
+	text-align: center;
+}
+h2 {
+	font-size: 10px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+h3 {
+	font-size: 16px;
+	color: #000;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-align: left;
+}
+
+#textArea{
+	position:relative;
+	top:-1px;
+	z-index:-1;
+	clear:left;
+	margin:0px 10px 10px 10px;
+	padding:10px;
+	height:100px;
+	border: 1px #ddd solid;
+}
+
+#wrap {
+	padding: 10px;
+}
+
+aside {
+	background-color: #a69769;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	padding: 10px;
+	margin: 10px 10px 10px 10px;
+	color: #FFF;
+}
+
+/* CSS Document */
+
+#conts{
+	margin-bottom:20px;
+	background-color:#666;
+	border-bottom:5px solid #77552C;
+	overflow: hidden;
+	}
+	/* floatによるboxのheight: 0;へのフォロー */
+	#conts:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 1px;
+    overflow: hidden;
+	}
+	/*\*/
+	* html #conts {
+	height: 1em;
+	overflow: visible;
+	}
+	/**/
+
+.clear {
+	clear: both;　/*floatの解除*/
+}
+
+/*-----------------------------------------------------------------
+ヘッダー
+-----------------------------------------------------------------*/
+.header2{
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff),to(#fff));　
+	background: linear-gradient(#fff, #fff);
+	background-size: 100% 100%;
+	height: 50px;
+	width: 100%;	
+	border-bottom: 1px solid #dadada;
+	position: fixed;
+    top: 0;
+    left:0;
+	z-index: 20;	
+}
+
+	.header2 h1{
+		display: block;
+		height: 50px;
+		width: 135px;
+		line-height: 50px;
+		font-weight: bold;
+		margin-left: 5px;
+		float: left;
+	}
+	.header2 nav{
+		float: right;
+		border-left: 1px solid #fff;
+	}
+	.header2 nav li{
+		float: left;
+		font-size: 9px;
+		color: #666;
+	}
+	.header2 nav li>a{
+		text-align: center;
+		display: block;
+		width: 60px;
+		height: 50px;
+		color: #666;
+	}
+	.header2 nav li:first-child>a{
+		border-right: 1px solid #fff;
+		border-left: 1px solid #dadada;
+	}
+	.header2 nav li:last-child>a{
+		border-left: 1px solid #dadada;
+	}
+
+
+#space {
+	margin-top: 50px;
+}
+
+#p_navi {
+	text-align: left;
+	margin-top: 55px;
+	font-size: 10px;
+	margin-left: 10px;
+}
+
+/*-----------------------------------------------------------------
+コンセプト
+-----------------------------------------------------------------*/
+#concept1 {
+	font-size: 9px;
+	text-align: center;
+	margin-bottom: 10px;
+	line-height: 2;
+}
+
+/*-----------------------------------------------------------------
+タイトルバー
+-----------------------------------------------------------------*/
+#title {
+	font-size: 20px;
+	margin: 20px 0px 5px 10px;
+	color: #FFF;
+	font-family: 'Century Gothic', serif;
+	letter-spacing: 0.3em;
+	font-weight: bolder;
+	background-color: #666;
+	padding: 4px;
+}
+
+/*-----------------------------------------------------------------
+各ページのタイトル
+-----------------------------------------------------------------*/
+
+.heading{
+    background: #fff;
+    border-bottom: 4px solid #000;
+    padding: 7px 0 7px 10px;
+    background: -moz-linear-gradient(top, #fff 0%, #fff 50%, #fff 51%, #fff 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(50%,#fff), color-stop(51%,#fff), color-stop(100%,#fff)); /* webkit */
+    -pie-background:linear-gradient(top, #fff 0%, #fff 50%, #fff 51%, #fff 100%); /* ie */
+    behavior: url(images/PIE.htc);  /* ie */
+}
+
+#hd {
+	text-align: right;
+	font-size: 10px;
+}
+
+/*-----------------------------------------------------------------
+メニュー
+-----------------------------------------------------------------*/
+
+.list ul{
+	border-bottom: 1px solid #ccc;
+}
+.list ul li{
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+	background: linear-gradient(#fff, #fff);
+	border-bottom: 1px solid #666;
+	height: 44px;
+	margin: 0;
+}
+.list ul li a{
+	color: #333;
+	font-size: 11px;
+	display: block;
+	height: 44px;
+	margin: 0;
+	padding: 0 0 0 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	font-weight: bold;
+	white-space: nowrap;
+	line-height: 44px;
+}
+.list ul li a::after{
+	content: url(../img/list_mark1.png);
+	float: right;
+}
+
+
+/*-----------------------------------------------------------------
+フッター
+-----------------------------------------------------------------*/
+#footer {
+	background-color: #4d4d4d;
+	text-align: center;
+	color: #FFF;
+	font-size: 9px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/*-----------------------------------------------------------------
+ホームページについて
+-----------------------------------------------------------------*/
+
+#about1 {
+	text-align: center;
+	font-size: 15px;
+	color: #000;
+	line-height: 1.2em;
+}
+#about2 {
+	text-align: center;
+	font-size: 12px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 1.3em;	
+}
+#about3 {
+	text-align: center;
+	color: #FFF;
+	background-color: #000;
+	padding: 5px;
+	font-size: 15px;
+	line-height: 1.3em;
+}
+
+#about4 {
+	font-size: 14px;
+	color: #000;
+	border-left: 4px solid #000;
+	margin-bottom: 10px;
+}
+#about5 {
+	font-size: 10px;
+	line-height: 1.3em;
+	margin-bottom: 15px;	
+}
+#about6 {
+	font-size: 14px;
+	color: #7FBCAD;
+	margin-bottom: 3px;
+}
+
+/*-----------------------------------------------------------------
+機能紹介
+-----------------------------------------------------------------*/
+#function1 {
+	font-size: 15px;
+	
+}
+#function2 {
+	font-size: 25px;
+	color: #E7BA21;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#function3 {
+	font-size: 12px;
+	line-height: 1.3em;
+}
+#function4 {
+	font-size: 15px;
+	background-color: #91710C;
+	color: #fff;
+	text-align: center;
+	padding: 3px;
+	width: 30px;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	float: left;
+	margin-right: 10px;
+}
+#function5 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #000;
+	line-height: 1.3em;
+}
+#function6 {
+	font-size: 14px;
+	margin-top: 5px;
+	margin-left: 45px;
+	color: #000;
+}
+#function7 {
+	font-size: 10px;
+	margin-left: 45px;
+	line-height: 1.3em;
+	margin-top: 5px;
+}
+
+/*-----------------------------------------------------------------
+価格・概要
+-----------------------------------------------------------------*/
+
+#price1 {
+	color: #000;
+	font-size: 15px;
+	line-height: 1.3em;
+}
+#price2 {
+	font-size: 12px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 3px;
+	width: 30px;
+	margin-top: 10px;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+#price3 {
+	font-size: 12px;
+	font-weight: bold;
+	color: #000;
+	margin-top: 3px;
+	line-height: 1.3em;
+}
+#price4 {
+	font-size: 9px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	line-height: 1.3em;
+}
+
+#price5 {
+	font-size: 15px;
+	color: #990033;
+	line-height: 1.3em;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+#price6 {
+	font-size: 12px;
+	line-height: 1.3em;
+	margin-bottom: 10px;	
+}
+
+#price7 {
+	font-size: 12px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #990033;
+}
+
+#price8 {
+	font-size: 15px;
+	margin: 5px 0px 5px 0px;
+	color: #333;
+	font-family: 'Century Gothic', serif;
+	letter-spacing: 0.1em;
+	font-weight: bolder;
+    border-bottom: 2px solid #000;
+	padding: 4px;
+}
+
+/* TABLE */
+table {
+	border: #FFF 1px solid;
+	border-collapse: collapse;
+	font-size: 12px;
+	width: 100%;	
+} 
+table th.t_top {
+	border: #999 1px dashed;
+	background-color: #FFF;
+	padding: 10px;
+	font: bold;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 12px;
+} 
+table td.t_line01 {
+	border: #999 1px dashed;
+	background-color: #FFF;
+	vertical-align: top;
+	padding: 10px;
+	font-size: 12px;
+	text-align: left;
+}
+
+table th.t_top2 {
+	border: #999 1px dashed;
+	background-color: #FFF;
+	padding: 10px;
+	font: bold;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 12px;
+} 
+
+/*-----------------------------------------------------------------
+ご注文の流れ
+-----------------------------------------------------------------*/
+
+#order1 {
+	text-align: center;
+	font-size: 13px;
+	color: #000;
+	margin-bottom: 10px;
+	line-height: 1.2em;
+}
+#order2 {
+	text-align: center;
+	color: #FFF;
+	background-color: #000;
+	padding: 10px;
+	font-size: 15px;
+	line-height: 1.3em;
+	margin-bottom: 15px;
+}
+#order3 img {
+	float: left;
+	margin-bottom: 18px;
+}
+#order3 p{
+	font-size: 10px;
+	line-height: 1.3em;
+	margin-bottom: 18px;
+	overflow: hidden;	
+}
+
+#order4 {
+	font-size: 10px;
+	line-height: 1.3em;	
+}
+
+/*-----------------------------------------------------------------
+制作実績
+-----------------------------------------------------------------*/
+
+#showcase1 {
+	text-align: center;
+	font-size: 15px;
+	color: #000;
+	line-height: 1.2em;
+}
+#showcase2 {
+	text-align: center;
+	font-size: 12px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 1.3em;	
+}
+#showcase3 {
+	font-size: 15px;
+	margin: 5px 0px 5px 0px;
+	color: #333;
+	font-family: 'Century Gothic', serif;
+	letter-spacing: 0.1em;
+	font-weight: bolder;
+    border-bottom: 2px solid #000;
+	padding: 4px;
+}
+#showcase4 img {
+	float: left;
+	margin-bottom: 18px;
+}
+#showcase4 p{
+	font-size: 10px;
+	line-height: 1.3em;
+	margin-bottom: 18px;
+	overflow: hidden;	
+}
+
+
+/*-----------------------------------------------------------------
+お客様の声
+-----------------------------------------------------------------*/
+
+
+
+
+/*-----------------------------------------------------------------
+お問合せ
+-----------------------------------------------------------------*/
+
+#contact1 {
+	font-size: 13px;
+	margin: 5px 0px 5px 0px;
+	color: #333;
+	font-family: 'Century Gothic', serif;
+	letter-spacing: 0.1em;
+	font-weight: bolder;
+    border-bottom: 2px solid #000;
+	padding: 4px;
+}
+#contact2 {
+	font-size: 12px;
+	margin-top: 15px;
+}
+#contact3 {
+	font-size: 10px;
+	line-height: 1.3em;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+input.hoge {
+	width: 80%;
+}
+
+
+
+#douisyo {
+	width: 250px;
+	height: 200px;
+	overflow: scroll;
+	margin-top: 15px;
+	border: solid 1px #ccc;
+	padding: 5px;
+	margin-bottom: 30px;
+}
+
+
+

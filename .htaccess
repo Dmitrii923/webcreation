@@ -1,0 +1,4 @@
+ErrorDocument 404 http://webcreation-lab.com/
+RewriteEngine on
+RewriteCond %{THE_REQUEST} ^.*/index.php
+RewriteRule ^(.*)index.php$ http://webcreation-lab.com/$1 [R=301,L]
