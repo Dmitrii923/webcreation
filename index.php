@@ -42,39 +42,39 @@ if((strpos($ua,'Android')!==false)&&(strpos($ua,'Mobile')!==false)) {
     header("Location: $Android");
     exit;
 }
-elseif(ereg("iPhone" , $info)){
+elseif(preg_match("/iPhone/" , $info)){
     header("Location: $iphone");
     exit;
 }
-elseif(ereg("DoCoMo" , $info)){
+elseif(preg_match("/DoCoMo/" , $info)){
     header("Location: $docomo");
     exit;
 }
-elseif(ereg("L-mode" , $info)){
+elseif(preg_match("/L-mode/" , $info)){
     header("Location: $lmode");
     exit;
 }
-elseif(ereg("KDDI" , $info)){
+elseif(preg_match("/KDDI/" , $info)){
     header("Location: $kddi");
     exit;
 }
-elseif(ereg("UP.Browser" , $info)){
+elseif(preg_match("/UP.Browser/" , $info)){
     header("Location: $kddi");
     exit;
 }
-elseif(ereg("WILLCOM" , $info)){
+elseif(preg_match("/WILLCOM/" , $info)){
     header("Location: $willcom");
     exit;
 }
-elseif(ereg("J-PHONE" , $info)){
+elseif(preg_match("/J-PHONE/" , $info)){
     header("Location: $softbank");
     exit;
 }
-elseif(ereg("SoftBank" , $info)){
+elseif(preg_match("/SoftBank/" , $info)){
     header("Location: $softbank");
     exit;
 }
-elseif(ereg("Vodafone" , $info)){
+elseif(preg_match("/Vodafone/" , $info)){
     header("Location: $softbank");
     exit;
 }
