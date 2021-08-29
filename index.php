@@ -6,6 +6,7 @@ $ua=$_SERVER['HTTP_USER_AGENT'];
 //===設定箇所=====================================
 
 //android用でのアクセス用URL
+//
 
 $Android="http://webcreation-lab.com/s/";
 
